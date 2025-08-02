@@ -1,0 +1,2 @@
+# AUCA-DBMS-ASSIGNMENT
+DBMS practice exercises (ASSIGNMENT)
