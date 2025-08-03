@@ -331,7 +331,7 @@ FROM departments;
  select e.first_name, case when ep.project_id is null then 'Unassigned' else 'assigned' end as project_status from employee e left join employee_projects ep on e.employee_id=ep.employee_id;
 --42. CASE: Show tax band based on salary. 
 
-assignment=# select first_name , salary, case when salary >=6000 then '30%' when salary >=4000 then '20%' else '10%' end as taxt_band from employee;
+select first_name , salary, case when salary >=6000 then '30%' when salary >=4000 then '20%' else '10%' end as taxt_band from employee;
 --43. Use nested CASE to label project duration. 
  select project_name,case when end_date is null then 'ongoing' else case when end_date-start_date > 180 then 'long-term' else 'short-term' end end as duration_type from projects;
 --44. Use CASE with MOD to show even/odd salary IDs. 
